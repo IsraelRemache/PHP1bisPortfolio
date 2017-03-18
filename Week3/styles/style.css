@@ -1,0 +1,318 @@
+html,
+body {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #181818;
+
+}
+
+
+
+
+/**
+Register and Login Form
+ **/
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.spotiform {
+  position: center;
+  margin: auto;
+  width: 45vw;
+
+
+}
+p{
+  padding: 20px;
+  font-size: 0.8em;
+  color: white;
+  margin-left: 20px;
+}
+p a{
+
+  font-size: 1.1em;
+  background-color: #23CF5E;
+  color: white;
+  padding: 9px 10px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+}
+.screen {
+  position: absolute;
+  width: 375px;
+  height: 600px;
+  margin: auto;
+  background-color: rgba(47, 47, 47, 1);
+}
+
+.logo {
+  position: absolute;
+  display: block;
+  top: 70px;
+  left: 132.5px; 
+  background: rgba(47, 47, 47, 1);
+  background-image: url('http://static.businessinsider.com/image/55801a50eab8ea1f1a3304f1/image.jpg');
+  height: 105px;
+  width: 130px;
+  background-size: 355px 105px;
+  background-repeat: no-repeat;
+  background-position: 15px 50%;
+  background-orgin: padding-box;
+}
+
+.nav {
+  color: white;
+  background-color: rgba(67, 67, 67, 1);
+  height: 44px;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 17px;
+  vertical-align: middle;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+
+.sep {
+  padding-top: 7px;
+  margin-top: 14px;
+  border-top: 1px solid #fff;
+  width: 100%;
+}
+
+form {
+  font-family: 'Montserrat';
+  width: 100%;
+  margin-top: 50%;
+  padding: 30px;
+  perspective: 1000px;
+}
+
+.user,
+.password,
+{
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 100;
+  width: 100%;
+  margin-top: 50%;
+  padding-left: 20px;
+  padding: 10px;
+  background-color: rgba(67, 67, 67, 1);
+  border: none;
+  font-size: 20px;
+}
+
+input {
+  color: white;
+  font-size: 18px;
+  font-weight: normal;
+  padding-left: 30px;
+  margin: 10px;
+  background-color: rgba(67, 67, 67, 1);
+  border: none;
+  width: 100%;
+  outline: none;
+  &:focus {
+    border-width: 12px;
+  }
+}
+
+.user:before {
+  position: absolute;
+  font-family: "entypo";
+  color: white;
+  font-style: normal;
+  display: inline-block;
+  left: 11px;
+  font-size: 22px;
+  content: '\1f464';
+}
+
+.password:before {
+  position: absolute;
+  font-family: "entypo";
+  color: white;
+  font-style: normal;
+  display: inline-block;
+  left: 14px;
+  font-size: 22px;
+  content: '\1f512';
+}
+
+button {
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  height: 40px;
+  background-color: #23CF5E;
+  border: 0px;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgba(47, 47, 47, 1);
+  -webkit-border-radius: 0px;
+}
+
+
+/**
+Userpage part
+ **/
+
+ * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    background: -webkit-linear-gradient(bottom left, #fc80dd 0%, #853ee2 10%);
+    background: -o-linear-gradient(bottom left, #fc80dd 0%, #853ee2 10%);
+    background: linear-gradient(to top right, #fc80dd 0%, #853ee2 10%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 20px;
+    font-style: italic;
+}
+
+element.style {
+    width: 100%;
+}
+
+
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-content: space-around;
+    height: 150px;
+}
+
+section ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+section ul li {
+    text-align: center;
+}
+
+nav ul li {
+    margin-bottom: 0.8em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: white;
+}
+
+@media (min-width: 40em) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav {
+        flex: 1 2 0%;
+    }
+    nav ul {
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-around;
+        margin-top: 2em;
+    }
+    section ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 900px) {
+    header {
+        display: flex;
+        width: 100%;
+    }
+    nav ul {
+        width: 500px;
+        padding: 0;
+        margin-left: auto;
+    }
+}
+
+
+/** 
+Artist list
+**/
+.artist a {
+
+  text-decoration: none;
+  font-size: 1.1em;
+  background-color: #93969b;
+  color: white;
+  padding: 9px 10px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+
+}
+.listartist {
+    width: 50px;
+    height: 50px;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row 
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   padding: 20px;
+   margin: 20px;
+}
+
+.backbutton a {
+  text-decoration: none;
+  font-size: 0.7em;
+  background-color: #93969b;
+  color: white;
+  padding: 9px 10px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+}
+
+
+.artist{
+    list-style: none; 
+   padding: 20px;
+   margin: 20px;
+  color: #4d7052;
+}
