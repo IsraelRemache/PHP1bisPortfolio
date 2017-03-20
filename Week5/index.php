@@ -11,11 +11,17 @@
 			//new student aanmaken
 			$student = new Student();
 
-			$student->Name = $_POST["name"];
+			$student->Name = $_POST["firstname"];
+			$student->LastName = $_POST["lastname"];
+			$student->Age = $_POST["age"];
+			$student->City = $_POST["city"];
+			$student->Photoshop = $_POST["photoshop"];
+			$student->Netwerk = $_POST["netwerk"];
+			
 			// Save 
-			$artist->Save();
+			$student->Save();
 			//boodschap bij sucess
-			$success = "The artist has been saved.";
+			$success = "The student has been saved.";
 		} 
 		catch (Exception $e) {
 			// boodschap bij fout
@@ -34,7 +40,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Students at Thomas More</title>
 	<style>
 		.error {
 			background-color: red;
@@ -51,6 +57,21 @@
 			padding: 0.3em;
 			border-radius: 5px;
 		}
+		.insertstudent {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+		.instertstudent[type=text]{
+			width: 100%;
+    		padding: 22px 40px;
+    		margin: 8px 0;
+    		box-sizing: border-box;
+		}
+
+		
+
+		
 	</style>
 </head>
 <body>
@@ -63,14 +84,14 @@
 		<div class="success"> <?php echo $success; ?></div>
 	<?php endif; ?>
 
-	<form action="" method="post">
-		<label for="firstname">Firstnaam</label>
+	<form action="" method="post" class="insertstudent">
+		<label for="firstname">Voornaam</label>
 		<input type="text" name="firstname" id="firstname">
-		<label for="firstname">Lastnaam</label>
+		<label for="lastname">Achternaam</label>
 		<input type="text" name="lastname" id="lastname">
-		<label for="age">Age</label>
+		<label for="age">Leeftijd</label>
 		<input type="text" name="age" id="age">
-		<label for="city">City</label>
+		<label for="city">Stad</label>
 		<input type="text" name="city" id="city">
 
 		<!-- StudentImd-->
@@ -82,7 +103,7 @@
 		<input type="text" name="netwerk" id="netwerk">
 
 
-		<button type="submit">Save Artist! </button>
+		<button type="submit"> Student Opslaan </button>
 
 	</form>
 	
