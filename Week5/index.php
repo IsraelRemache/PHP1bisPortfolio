@@ -11,8 +11,8 @@
 			//new student aanmaken
 			$student = new Student();
 
-			$student->Name = $_POST["firstname"];
-			$student->LastName = $_POST["lastname"];
+			$student->Firstname = $_POST["firstname"];
+			$student->Lastname = $_POST["lastname"];
 			$student->Age = $_POST["age"];
 			$student->City = $_POST["city"];
 			$student->Photoshop = $_POST["photoshop"];
@@ -26,7 +26,7 @@
 		catch (Exception $e) {
 			// boodschap bij fout
 			$error = $e->getMessage();
-	}
+		}
 
 	}
 
@@ -69,7 +69,7 @@
     		box-sizing: border-box;
 		}
 
-		
+
 
 		
 	</style>
