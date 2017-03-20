@@ -122,12 +122,12 @@
 
 			//query schrijven
 			$statement = $conn->prepare("INSERT INTO students (firstname, lastname, age, city, photoshop, netwerk) VALUES (:firstname, :lastname, :age, :city, :photoshop, :netwerk)");
-			$statement->bindValue(":firstname", $this->m_sFirstname);
-			$statement->bindValue(":lastname", $this->m_sLastname);
-			$statement->bindValue(":age", $this->m_iAge);
-			$statement->bindValue(":city", $this->m_sCity);
-			$statement->bindValue(":photoshop", $this->m_iPhotoshopKennis);
-			$statement->bindValue(":netwerk", $this->m_iNetwerkKennis);
+			$statement->bindValue(":firstname", $this->m_sFirstname, PDO::PARAM_STR);
+			$statement->bindValue(":lastname", $this->m_sLastname, PDO::PARAM_STR);
+			$statement->bindValue(":age", $this->m_iAge, PDO::PARAM_INT);
+			$statement->bindValue(":city", $this->m_sCity, PDO::PARAM_STR);
+			$statement->bindValue(":photoshop", $this->m_iPhotoshopKennis, PDO::PARAM_INT);
+			$statement->bindValue(":netwerk", $this->m_iNetwerkKennis, PDO::PARAM_INT);
 
 			//query executen
 			$res = $statement->execute();
